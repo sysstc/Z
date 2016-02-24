@@ -1,0 +1,145 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+-optimizationpasses 5                                                           # 指定代码的压缩级别
+-dontusemixedcaseclassnames                                                     # 是否使用大小写混合
+-dontskipnonpubliclibraryclasses                                                # 是否混淆第三方jar
+-dontpreverify                                                                  # 混淆时是否做预校验
+-verbose                                                                        # 混淆时是否记录日志
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*        # 混淆时所采用的算法
+
+
+
+-keep public class * extends android.app.Fragment  
+-keep public class * extends android.app.Activity                               # 保持哪些类不被混淆
+-keep public class * extends android.app.Application                            # 保持哪些类不被混淆
+-keep public class * extends android.app.Service                                # 保持哪些类不被混淆
+-keep public class * extends android.content.BroadcastReceiver                  # 保持哪些类不被混淆
+-keep public class * extends android.content.ContentProvider                    # 保持哪些类不被混淆
+-keep public class * extends android.app.backup.BackupAgentHelper               # 保持哪些类不被混淆
+-keep public class * extends android.preference.Preference                      # 保持哪些类不被混淆
+-keep public class com.google.vending.licensing.ILicensingService
+-keep public class com.android.vending.licensing.ILicensingService              # 保持哪些类不被混淆
+
+-keepclasseswithmembernames class * {                                           # 保持 native 方法不被混淆
+    native <methods>;
+}
+
+-keepclasseswithmembers class * {                                               # 保持自定义控件类不被混淆
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);     # 保持自定义控件类不被混淆
+}
+
+-keepclassmembers class * extends android.app.Activity {                        # 保持自定义控件类不被混淆
+   public void *(android.view.View);
+}
+
+-keepclassmembers enum * {                                                      # 保持枚举 enum 类不被混淆
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class * implements android.os.Parcelable {                                # 保持 Parcelable 不被混淆
+  public static final android.os.Parcelable$Creator *;
+}
+
+#-dontwarn com.fanwe.zhongchou.model.**
+#-keep class com.fanwe.zhongchou.model.** { *; }
+
+#-dontwarn com.fanwe.zhongchou.customview.**
+#-keep class com.fanwe.zhongchou.customview.** { *; }
+
+-libraryjars libs/nineoldandroids-2.4.0.jar
+-libraryjars libs/vsivsutils_1.0.3.jar
+
+#event
+-libraryjars libs/eventbus-bin-src-1.0.jar 
+-dontwarn de.greenrobot.event.**  
+-keep class de.greenrobot.event.** { *;}
+-keep class de.greenrobot.event.util.** { *; }
+-keep class de.greenrobot.dao.** { *;}
+-keep class de.greenrobot.dao.async.** { *;}
+-keep class de.greenrobot.dao.identityscope.** { *;}
+-keep class de.greenrobot.dao.internal.** { *;}
+-keep class de.greenrobot.dao.query.** { *;}
+-keepclassmembers class ** {
+    public void onEvent*(**);
+}
+
+#v4
+-libraryjars libs/android-support-v4.jar
+-dontwarn android.support.**
+-dontwarn android.support.v4.**  
+-keep class android.support.v4.** { *; }  
+
+#fast json相关
+-libraryjars libs/fastjson-1.1.41.jar                                 #fastjson的jar包不要混淆
+-keep class com.alibaba.fastjson.** { *; }      #fastjson包下的所有类不要混淆，包括类里面的方法
+-keepattributes Signature                            #这行一定要加上，否则你的object中含有其他对象的字段的时候会抛出ClassCastException
+
+-dontwarn com.alibaba.fastjson.**              #告诉编译器fastjson打包过程中不要提示警告
+
+#xutils相关
+-libraryjars libs/xutils-v1.0.jar                      #xutils的jar包不要混淆
+-keep class com.lidroid.** { *; }                     #xutils包下所有类不要混淆，包括类里面的方法
+-keep class * extends java.lang.annotation.Annotation { *; }#注解包下的所有内容不要混淆，ViewUitls有用到
+
+#图片加载
+-libraryjars libs/universal-image-loader-1.9.1-with-sources.jar  #imageLoader的jar包不要混淆
+-keep class com.nostra13.universalimageloader.** { *; }              #imageLoader包下所有类及类里面的内容不要混淆
+
+#友盟相关
+-libraryjars libs/com.umeng.message.lib_v2.3.0.jar     #友盟统计的jar包不要混淆
+-dontwarn com.umeng.**
+-keep class com.umeng.** { *; }                        #友盟统计jar包下的所有类及类里面的所有内容不要混淆
+
+-keep class com.baidu.** { *; } 
+-keep class vi.com.gdi.bgl.android.**{*;}
+
+-dontwarn org.apache.commons.**
+-keep class org.apache.commons.** { *; }
+
+-dontwarn com.google.android.maps.**
+-keep class com.google.android.maps.** { *; }
+
+-dontwarn com.facebook.**
+-keep class com.facebook.** { *; }
+
+-dontwarn com.tencent.**
+-keep class com.tencent.** { *; }
+
+-assumenosideeffects
+class android.util.Log
+ {
+    public static ***
+ e(...);
+    public static ***
+ w(...);
+    public static ***
+ wtf(...);
+    public static ***
+ d(...);
+    public static ***
+ v(...);
+}

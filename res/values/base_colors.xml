@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 分割线颜色 -->
+    <color name="stroke">#E0E0E0</color>
+    <!-- ================= -->
+    <color name="transparent">#00000000</color>
+    <!-- 颜色 按l_m_h_x_xx从浅到深 -->
+    <!-- ================= -->
+    <color name="white">#FFFFFF</color>
+    <color name="white_l">#F9F9F9</color>
+    <!-- ================= -->
+    <color name="red">#FF0000</color>
+    <!-- 255,123,71 -->
+    <color name="red_l">#FF7B47</color>
+    <!-- 255,72,0 -->
+    <color name="red_m">#FF4800</color>
+    <!-- 223,57,57 -->
+    <color name="red_h">#DF3939</color>
+    <!-- ================= -->
+    <color name="blue">#0000FF</color>
+    <color name="blue_l">#0071ff</color>
+    <color name="blue_m">#34A1DA</color>
+    <color name="blue_h">#7AD2F9</color>
+    <color name="blue_x">#4DBDF5</color>
+    <!-- ================= -->
+	<color name="black">#000000</color>    
+    <color name="black_l">#2E2E2E</color>
+    <color name="black_m">#333333</color>
+    <color name="black_h">#6B7878</color>
+    <color name="black_x">#000000</color>
+    <color name="black_xx">#454D5C</color>
+    <!-- ================= -->
+    <color name="gray">#D0A972</color>
+    <color name="gray_l">#f0f0f0</color>
+    <color name="gray_m">#F4F4F4</color>
+    <color name="gray_h">#2b4c4c4c</color>
+    <color name="gray_x">#808080</color>
+    <color name="gray_xx">#B2B2B2</color>
+    <!-- ================= -->
+    <color name="green">#00FF00</color>
+    <color name="green_l">#34DA8E</color>
+    <color name="green_m">#38C785</color>
+    <color name="green_h">#57B23B</color>
+    <!-- ================= -->
+    <!-- 255,132,0 -->
+    <color name="orange_l">#FF8400</color>
+    <color name="orange_m">#FF632F</color>
+</resources>

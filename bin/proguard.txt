@@ -1,0 +1,74 @@
+# view AndroidManifest.xml #generated:45
+-keep class com.example.z.activity.HomeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:55
+-keep class com.example.z.activity.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:54
+-keep class com.example.z.activity.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:56
+-keep class com.example.z.activity.Tab1Activity { <init>(...); }
+
+# view AndroidManifest.xml #generated:39
+-keep class com.example.z.app.App { <init>(...); }
+
+# view res/layout/activity_home.xml #generated:455
+-keep class com.example.z.customview.MaterialLayout { <init>(...); }
+
+# view res/layout/activity_home.xml #generated:12
+-keep class com.example.z.customview.PullPushScrollView { <init>(...); }
+
+# view res/layout/activity_home.xml #generated:8
+# view res/layout/activity_tab_1.xml #generated:7
+-keep class com.example.z.customview.SimpleActionbar { <init>(...); }
+
+# view res/layout/swipe_back_material.xml #generated:2
+-keep class com.example.z.customview.SwipeBackMaterialLayout { <init>(...); }
+
+# view res/layout/activity_home.xml #generated:25
+-keep class com.example.z.customview.WaveLayout { <init>(...); }
+
+# view res/layout/activity_home.xml #generated:21
+-keep class com.example.z.customview.adv.AdvertisementView { <init>(...); }
+
+# view res/layout/activity_login.xml #generated:14
+# view res/layout/activity_login.xml #generated:30
+-keep class com.example.z.customview.biuEditText.BiuEditText { <init>(...); }
+
+# view res/layout/activity_main.xml #generated:26
+# view res/layout/activity_main.xml #generated:37
+# view res/layout/activity_main.xml #generated:48
+# view res/layout/activity_main.xml #generated:59
+-keep class com.example.z.customview.tab.SimpleTabView { <init>(...); }
+
+# view AndroidManifest.xml #generated:53
+-keep class com.example.z.photo.PhotoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:52
+-keep class com.example.z.zxing.CaptureActivity { <init>(...); }
+
+# view res/layout/popup_crop.xml #generated:7
+-keep class com.example.z.zxing.view.CropImageView { <init>(...); }
+
+# view res/layout/dialog_custom_loading.xml #generated:11
+-keep class com.z.generalframework.customview.HeartProgressBar { <init>(...); }
+
+# onClick res/layout/activity_home.xml #generated:123
+# onClick res/layout/activity_home.xml #generated:142
+# onClick res/layout/activity_home.xml #generated:161
+# onClick res/layout/activity_home.xml #generated:180
+# onClick res/layout/activity_home.xml #generated:213
+# onClick res/layout/activity_home.xml #generated:241
+# onClick res/layout/activity_home.xml #generated:269
+# onClick res/layout/activity_home.xml #generated:297
+# onClick res/layout/activity_home.xml #generated:326
+# onClick res/layout/activity_home.xml #generated:354
+# onClick res/layout/activity_home.xml #generated:382
+# onClick res/layout/activity_home.xml #generated:40
+# onClick res/layout/activity_home.xml #generated:410
+# onClick res/layout/activity_home.xml #generated:60
+# onClick res/layout/activity_home.xml #generated:79
+# onClick res/layout/activity_home.xml #generated:98
+-keepclassmembers class * { *** clickTab1(...); }
+

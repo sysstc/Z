@@ -1,0 +1,32 @@
+<resources>
+    <declare-styleable name="SimpleActionbar">
+        <attr name="background" format="reference|color" />
+        <attr name="text_color" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="TabView">
+        <attr name="selected_color" format="reference|color" />
+        <attr name="normal_color" format="reference|color" />
+        <attr name="text" format="string" />
+        <attr name="selected_icon" format="reference|color" />
+        <attr name="normal_icon" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="ShSwitchView">
+        <attr name="tintColor" format="reference|color" />
+        <attr name="outerStrokeWidth" format="reference|dimension" />
+        <attr name="shadowSpace" format="reference|dimension" />
+    </declare-styleable>
+    <declare-styleable name="HeartProgressBar">
+        <attr name="heartColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="BiuEditStyle">
+        <attr name="biu_text_color" format="color" />
+        <attr name="biu_text_start_size" format="dimension" />
+        <attr name="biu_text_scale" format="float" />
+        <attr name="biu_duration" format="integer" />
+        <attr name="biu_type" format="enum">
+            <enum name="flyup" value="0" />
+            <enum name="flydown" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

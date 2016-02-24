@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/act_bg" >
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_tab"
+        android:layout_marginBottom="1dp" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <com.example.z.customview.tab.SimpleTabView
+            android:id="@+id/tabOne"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:normal_color="@color/tab_normal"
+            app:normal_icon="@string/main_message2"
+            app:selected_color="@color/tab_selected"
+            app:selected_icon="@string/main_message1"
+            app:text="消息" />
+
+        <com.example.z.customview.tab.SimpleTabView
+            android:id="@+id/tabTwo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:normal_color="@color/tab_normal"
+            app:normal_icon="@string/main_contacts2"
+            app:selected_color="@color/tab_selected"
+            app:selected_icon="@string/main_contacts1"
+            app:text="联系人" />
+
+        <com.example.z.customview.tab.SimpleTabView
+            android:id="@+id/tabThree"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:normal_color="@color/tab_normal"
+            app:normal_icon="@string/main_store2"
+            app:selected_color="@color/tab_selected"
+            app:selected_icon="@string/main_store1"
+            app:text="店铺" />
+
+        <com.example.z.customview.tab.SimpleTabView
+            android:id="@+id/tabFour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:normal_color="@color/tab_normal"
+            app:normal_icon="@string/main_my2"
+            app:selected_color="@color/tab_selected"
+            app:selected_icon="@string/main_my1"
+            app:text="我" />
+    </LinearLayout>
+
+</RelativeLayout>
