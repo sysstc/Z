@@ -75,15 +75,7 @@ public class ABRequestCallBack<E extends BaseModel> extends RequestCallBack<Stri
 	@SuppressWarnings("hiding")
 	private <E> E parseObject(Class<E> clazz, ResponseInfo<String> responseInfo) {
 		if (responseInfo != null && clazz != null) {
-			// fastJson不能直接解析服务端返回的Json，只需要进行以下处理就可以解决
 			String result = responseInfo.result;
-			result = result.replaceAll("\\\\", "");
-			result = result.replaceAll(":\"\\{", ":\\{");
-			result = result.replaceAll("\\}\"", "\\}");
-			// String s = notice.getContent().toString().replaceAll("&quot;",
-			// "\"")
-			// .replaceAll("&lt;", "<").replaceAll("&gt;",
-			// ">").replaceAll("&amp;", "&");
 			Log.i("ABRequestCallBack", result);
 			try {
 				return JSON.parseObject(result, clazz);
